@@ -1,12 +1,12 @@
-import { Meta, Story } from "@storybook/react";
-import Display, { DisplayProps } from "../components/Display";
+import type { Meta, StoryFn } from "@storybook/react";
+import Display from "../components/Display";
 
 export default {
   title: "Components/Display",
   component: Display,
 } as Meta;
 
-const Template: Story<DisplayProps> = (args) => <Display {...args} />;
+const Template: StoryFn<DisplayProps> = (args) => <Display {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

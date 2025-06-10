@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 import Calculator from "../components/Calculator";
 
 export default {
@@ -6,6 +6,6 @@ export default {
   component: Calculator,
 } as Meta;
 
-const Template: Story = () => <Calculator />;
+const Template: StoryFn = () => <Calculator />;
 
 export const Default = Template.bind({});

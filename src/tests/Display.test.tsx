@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Display from "../components/Display";
 import { describe, expect, it } from "vitest";
+import "@testing-library/jest-dom";
 
 describe("Display Component", () => {
   it("renders the value passed as a prop", () => {

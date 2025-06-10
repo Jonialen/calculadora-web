@@ -1,5 +1,6 @@
-import { renderHook, act } from "vitest";
+import { describe, expect, it } from "vitest";
 import useCalculator from "../hooks/useCalculator";
+import { act, renderHook } from "@testing-library/react";
 
 describe("useCalculator Hook", () => {
   it("handles number input", () => {

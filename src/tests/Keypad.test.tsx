@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { vi } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import Keypad from "../components/Keypad";
 
 describe("Keypad Component", () => {
