@@ -1,54 +1,85 @@
-# React + TypeScript + Vite
+# Calculadora React UVG
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Calculadora simple hecha en React + TypeScript, usando Bun y Vite.  
+Incluye tests automáticos, linting estricto y Storybook para componentes.
 
-Currently, two official plugins are available:
+## 🚀 Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Bun](https://bun.sh/) v1.0 o superior
+- Node.js (solo para desarrollo, no para correr la app)
+- Navegador moderno
 
-## Expanding the ESLint configuration
+## 📦 Instalación
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Clona el repositorio y entra a la carpeta:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone <URL_DEL_REPO>
+cd calculadora
+bun install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🖥️ Correr la app
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+bun run dev
 ```
+
+Abre [http://localhost:5173](http://localhost:5173) en tu navegador.
+
+## 🧪 Tests
+
+Corre todos los tests con:
+
+```bash
+bun run test
+```
+
+> **Nota:**  
+> No uses `bun test`, usa `bun run test` o `bunx vitest`.
+
+## 🧹 Linting
+
+Verifica el código y corrige errores de estilo (sin punto y coma, máximo 120 caracteres por línea):
+
+```bash
+bun run lint
+# o para corregir automáticamente:
+bun run lint --fix
+```
+
+## 📚 Storybook
+
+Visualiza y prueba los componentes de la calculadora:
+
+```bash
+bun run storybook
+```
+
+Abre [http://localhost:6006](http://localhost:6006) en tu navegador.
+
+## 📄 Scripts útiles
+
+| Comando              | Descripción                                 |
+|----------------------|---------------------------------------------|
+| `bun run dev`        | Corre la app en modo desarrollo             |
+| `bun run build`      | Compila la app para producción              |
+| `bun run test`       | Ejecuta los tests con Vitest                |
+| `bun run lint`       | Linting del código                          |
+| `bun run lint --fix` | Linting y auto-fix                          |
+| `bun run storybook`  | Inicia Storybook                            |
+
+## 🌐 Demo en línea
+
+Puedes ver la calculadora funcionando en:  
+**https://TU-DOMINIO.com/calculadora**
+
+## 📝 Notas
+
+- Todo el input se hace desde los botones de la calculadora.
+- El display no muestra más de 9 caracteres.
+- Si el resultado es negativo o mayor a 999,999,999, muestra `ERROR`.
+- El código cumple con el estándar JavaScript Standard Style (sin punto y coma).
+- No se usa `node_modules` en el repo.
+
+---
