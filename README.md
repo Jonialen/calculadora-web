@@ -72,7 +72,7 @@ Abre [http://localhost:6006](http://localhost:6006) en tu navegador.
 ## 🌐 Demo en línea
 
 Puedes ver la calculadora funcionando en:  
-**https://TU-DOMINIO.com/calculadora**
+**https://calcu.eduvial.space/**
 
 ## 📝 Notas
 
