@@ -45,9 +45,10 @@ const useCalculator = () => {
     switch (op) {
       case "+":
         return a + b > 999999999 ? "ERROR" : a + b;
-      case "-":
+      case "-": {
         const subtraction = a - b;
         return subtraction < -999999999 ? "ERROR" : subtraction;
+      }
       case "*":
         return a * b > 999999999 ? "ERROR" : a * b;
       case "/":
